@@ -1,0 +1,25 @@
+[package]
+name = "poc-rust-webcomponents"
+description = "Proof of Concept: Implement Web Components in Rust"
+license = "./LICENSE"
+readme = "./README.md"
+repository = "https://github.com/reactive-graph/poc-rust-webcomponents"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+custom-elements = "0.2.1"
+wasm-bindgen = "0.2"
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "Window",
+    "Document",
+    "HtmlElement",
+    "Node",
+    "Text"
+]
