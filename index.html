@@ -2,26 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Custom Elements - Vanilla</title>
-    <script type="module">
-      import init, { run } from './pkg/poc_rust_webcomponents.js';
-      async function main() {
-        await init();
-        run();
-      }
-      main();
-    </script>
-    <style>
-        /* This will only affect the paragraph outside the Web Components. */
-        p { color: blue; }
-    </style>
+    <title>WebAssembly WebComponent</title>
+    <script src="main.js" defer></script>
 </head>
 <body>
-<p>This text should be blue, because it's not affected by the encapsulated style. (The counts should be green!)</p>
-<ce-vanilla></ce-vanilla>
-<ce-vanilla name="Alice"></ce-vanilla>
-<ce-vanilla name="Bob"></ce-vanilla>
-<ce-vanilla name="Charlie"></ce-vanilla>
+
+<h1>WebComponent Template</h1>
+<template id="webassembly-webcomponent">
+    <style>
+        p {
+            color: white;
+            background-color: #666;
+            padding: 5px;
+
+        }
+    </style>
+    <p>
+        <slot name="webcomponent-text">Default Text</slot>
+    </p>
+</template>
+
+<webassembly-webcomponent>
+    <span slot="webcomponent-text">Hello World!</span>
+</webassembly-webcomponent>
+
+<webassembly-webcomponent>
+    <ul slot="webcomponent-text">
+        <li>rustwasm</li>
+        <li>Emscripten</li>
+        <li>Blazor</li>
+    </ul>
+</webassembly-webcomponent>
 </body>
 </html>
