@@ -8,8 +8,8 @@ https://crates.io/crates/custom_elements
 
 ## Install
 
-`cargo install wasm-pack`
-`cargo install --locked trunk`
+1. `cargo install wasm-pack`
+2. `cargo install --locked trunk`
 
 ## Compile
 
