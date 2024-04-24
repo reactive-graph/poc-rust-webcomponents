@@ -13,6 +13,8 @@ https://crates.io/crates/custom_elements
 
 ## Compile
 
-`./build.sh`
+`trunk build`
 
 ## Run
+
+`trunk serve`

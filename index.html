@@ -1,37 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>WebAssembly WebComponent</title>
-    <script src="main.js" defer></script>
 </head>
 <body>
-
-<h1>WebComponent Template</h1>
-<template id="poc-rust-webcomponent">
-    <style>
-        p {
-            color: white;
-            background-color: #666;
-            padding: 5px;
-
-        }
-    </style>
-    <p>
-        <slot name="webcomponent-text">Default Text</slot>
-    </p>
-</template>
-
-<poc-rust-webcomponent>
-    <span slot="webcomponent-text">Hello World!</span>
-</poc-rust-webcomponent>
-
-<poc-rust-webcomponent>
-    <ul slot="webcomponent-text">
-        <li>rustwasm</li>
-        <li>Emscripten</li>
-        <li>Blazor</li>
-    </ul>
-</poc-rust-webcomponent>
+<h1>Test without attribute</h1>
+<test-component></test-component>
+<h1>Test with attribute</h1>
+<test-component name="moe"></test-component>
 </body>
 </html>
